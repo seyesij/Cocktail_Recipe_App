@@ -1,0 +1,37 @@
+<div class="heading">
+  <h4><%= @cocktail.name %> Recipes!</h4>
+  <div class="add">
+    <%= button_to "Add a recipe", new_cocktail_recipe_path(@cocktail.id), method: :get %>
+  </div>
+</div>
+<br><br><br>
+
+<ol>
+  <% @recipes.each do |recipe| %>
+    <li>
+      <h3><%= recipe.title %></h3>
+      <p><%= recipe.description %></p>
+    </li>
+  <% end %>
+</ol>
+
+<p><%= link_to "Back to cocktails", cocktails_path %></p>
+<br><br>
+
+<div class="edit">
+  <div>
+    <%= image_tag @cocktail.photo, class:"showimage" %>
+  </div>
+  <div>
+   <h2>Make Cocktail Edits Here!</h2>
+    <%= form_for :cocktail, method: 'patch', url: {action: 'update'} do |f| %>
+    <%= label(:cocktail, :name) %>
+    <%= f.text_field :name %>
+    <%= label(:cocktail, :photo) %>
+    <%= f.text_field :photo %>
+    <%= f.submit "Edit Cocktail" %>
+  </div>
+  <div>
+    <%= image_tag @cocktail.photo, class:"showimage" %>
+  </div>
+<% end %>

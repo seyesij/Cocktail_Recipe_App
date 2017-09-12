@@ -1,0 +1,31 @@
+  <h1>YUMMY COCKTAIL RECIPES</h1>
+
+<div class="form">
+  <%= form_for :cocktail, method: 'post', url: {action: 'create'} do |f| %>
+    <%= label(:cocktail, :name) %>
+    <%= f.text_field :name %>
+    <%= label(:cocktail, :photo) %>
+    <%= f.text_field :photo %>
+    <%= f.submit "Add New Cocktail" %>
+  <% end %>
+</div>
+<br>
+
+
+<div class="cocktailcontainer">
+  <% @cocktails.each do |cocktail| %>
+  <div class="cocktails">
+    <h3><%= cocktail.name %> Recipes</h3>
+    <a href='/cocktails/<%= cocktail.id %>'><%= image_tag cocktail.photo, class:"style_image" %></a><br>
+    <div class="button">
+      <%= button_to 'Delete Cocktail', cocktail, method: :delete %>
+      <button><a href='/cocktails/<%= cocktail.id %>'>Edit Cocktail</a></button>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+
+
+
