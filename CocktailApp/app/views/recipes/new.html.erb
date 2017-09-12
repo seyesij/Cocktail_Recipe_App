@@ -1,0 +1,6 @@
+<%= form_for @recipe, url: {action: 'create'} do |f| %>
+  <%= f.text_field :title, placeholder: 'Title' %>
+  <%= f.text_field :description, placeholder: 'Description' %>
+  <%= f.submit %>
+<% end %>
+
