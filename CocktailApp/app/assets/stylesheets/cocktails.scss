@@ -1,0 +1,62 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.style_image {
+  width: 400px;
+  height: 300px;
+}
+
+.showimage {
+  width: 300px;
+  height: 200px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  color: brown;
+  font-size: 30px;
+}
+
+.heading {
+  text-align: center;
+  line-height: 0;
+
+}
+
+.add {
+  line-height: 0;
+}
+
+.form {
+  background-color: #ffbb99;
+  height: 50px;
+  padding: 20px 0 0 480px;
+}
+
+.edit {
+  background-color: #ffbb99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+
+}
+
+.cocktailcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.button {
+  display: flex;
+  background-color: #cccccc;
+  width: 400px;
+}
